@@ -41,7 +41,7 @@ def second():
     return render_template("second.html")
         
         
-# localhost:5000/third post형식으로 요청 시
+# *POST는 localhost:5000/third를 직접주소입력이 아닌 요청 방식(form action='/third')으로만 이동가능하게한다.
 @app.route("/third", methods=["post"])
 def third():
     _title = request.form["title"]
